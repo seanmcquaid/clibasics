@@ -1,0 +1,32 @@
+man
+
+The man command - the manual command - is used to show the manual of the inputted command. Just like a film on the nature of film, the man command is the meta command of the Linux CLI. Inputting the man command will show you all information about the command you are using. An example:
+
+
+man cd
+
+
+The inputting command will show the manual or all relevant information for the change directory command.
+
+locate
+
+The locate - a.k.a. find - command is meant to find a file within the Linux OS. If you don't know the name of a certain file or you aren't sure where the file is saved and stored, the locate command comes in handy. A locate command example:
+
+
+locate -i *red*house**city*
+
+
+The stated command will locate an file with the a file name containing "Red", "House" and "City". A note on the input: the use of "-i" tells the system to search for a file unspecific of capitalization (Linux functions in lower case). The use of the asterik "*" signifies searching for a wildcard. A wildcard tells the system to pull any and all files containing the search criteria.
+
+By specifying -i with wildcards, the locate CLI command will pull back all files containing your search criteria effectivley casting the widest search net the system will allow.
+
+find command examples
+Find files using file-name ( case in-sensitve find)
+
+# find -iname "MyCProgram.c"
+Execute commands on files found by the find command
+
+$ find -iname "MyCProgram.c" -exec md5sum {} \;
+Find all empty files in home directory
+
+# find ~ -empty
